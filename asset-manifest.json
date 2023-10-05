@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/SpaceX-GraphQl-React/static/css/main.1bd5f013.css",
-    "main.js": "/SpaceX-GraphQl-React/static/js/main.90cac30a.js",
+    "main.js": "/SpaceX-GraphQl-React/static/js/main.767f06c7.js",
     "static/js/787.6e66b37d.chunk.js": "/SpaceX-GraphQl-React/static/js/787.6e66b37d.chunk.js",
     "static/media/bg_image1.png": "/SpaceX-GraphQl-React/static/media/bg_image1.73371556df66a85ed7dc.png",
     "index.html": "/SpaceX-GraphQl-React/index.html",
     "main.1bd5f013.css.map": "/SpaceX-GraphQl-React/static/css/main.1bd5f013.css.map",
-    "main.90cac30a.js.map": "/SpaceX-GraphQl-React/static/js/main.90cac30a.js.map",
+    "main.767f06c7.js.map": "/SpaceX-GraphQl-React/static/js/main.767f06c7.js.map",
     "787.6e66b37d.chunk.js.map": "/SpaceX-GraphQl-React/static/js/787.6e66b37d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1bd5f013.css",
-    "static/js/main.90cac30a.js"
+    "static/js/main.767f06c7.js"
   ]
 }
