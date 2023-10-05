@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import SpaceService from "./graphql";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from "./Components/LandingPage";
+import Dashboard from "./Components/dashboard";
+import { useDispatch } from "react-redux";
+import { datastore } from "./Redux/action";
 
 function App() {
+  const dispath = useDispatch();
+  const load = async () => {
+    const spaceMission = await SpaceService.getSpaceMission();
+    console.log(spaceMission.launches, "spaceMission");
+    dispath(datastore(spaceMission.launches));
+  };
+  useEffect(() => {
+    load();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

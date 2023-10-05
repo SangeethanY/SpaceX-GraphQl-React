@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import allreducer from "./Redux/reducer/index";
+import { legacy_createStore } from "redux";
+import { ApolloProvider } from "@apollo/client";
+import { apolloClient } from "./graphql";
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const strore = legacy_createStore(allreducer);
 root.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={apolloClient}>
+      <Provider store={strore}>
+        <App />
+      </Provider>
+    </ApolloProvider>
   </React.StrictMode>
 );
 
