@@ -14,11 +14,13 @@ function LandingPage() {
         Well Come to Our Tour!
       </Box>
       <div className={styles.landing_page_button}>
-        <MuiButton
-          size={matches ? "small" : "medium"}
-          variantText="outlined"
-          label="SpaceX"
-        />
+        <a href="https://www.spacex.com/human-spaceflight/mars/">
+          <MuiButton
+            size={matches ? "small" : "medium"}
+            variantText="outlined"
+            label="SpaceX"
+          />
+        </a>
         <Link to="/dashboard">
           <MuiButton
             size={matches ? "small" : "medium"}
