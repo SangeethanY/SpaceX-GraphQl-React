@@ -18,7 +18,7 @@ function App() {
     load();
   }, []);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/SpaceX-GraphQl-React">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
